@@ -1,7 +1,6 @@
-/*****************************************************************************/
 //	Function: M365 BLE message builder
-//	Author:   Salvador Martín
-//	Date:    12/02/2018
+//	Author:   Salvador Martin
+//	Date:    03/02/2019
 //
 //	This library is free software; you can redistribute it and/or
 //	modify it under the terms of the GNU Lesser General Public
@@ -17,24 +16,12 @@
 //	Use at your own risk.
 //
 //	If you modify or use this, please don't delete my name and give me credits.
-/*****************************************************************************/
 
 package Ninebot;
 
-public enum NbCommands {
-	MASTER_TO_M365(0x20),
-	MASTER_TO_BATTERY(0x22),
-	READ(0x01),
-	WRITE(0x03);
-	
-	private final int command;
-	
-	NbCommands(int command) {
-		this.command = command;
-	}
-	
-	public int getCommand() {
-		return this.command;
-	}
-	
+enum class NbCommands(val command: Int) {
+    MASTER_TO_M365(0x20),
+    MASTER_TO_BATTERY(0x22),
+    READ(0x01),
+    WRITE(0x03)
 }
