@@ -1,6 +1,6 @@
 ## Usage
 * Turning off the scooter: 55 AA 03 20 03 79 01 5F FF
-```
+```kotlin
 val turnOffScooter = NbMessage()
 		.setDirection(NbCommands.MASTER_TO_M365)
 		.setReadOrWrite(NbCommands.WRITE)
@@ -10,7 +10,7 @@ val turnOffScooter = NbMessage()
 ````
 * Changing password: 55 AA 08 20 03 79 XX XX XX XX XX XX 23 FE
     * Password must be length 6, only numbers and ascii charset
-```
+```kotlin
 val changePassword = NbMessage()
 		.setDirection(NbCommands.MASTER_TO_M365)
 		.setReadOrWrite(NbCommands.WRITE)
@@ -19,7 +19,7 @@ val changePassword = NbMessage()
 		.build()
 ```
 * Getting the controller version: 55 AA 03 20 01 1A 02 BF FF
-```
+```kotlin
 val ctrlVersion = NbMessage()
 		.setDirection(NbCommands.MASTER_TO_M365)
 		.setReadOrWrite(NbCommands.READ)
